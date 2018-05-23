@@ -7,17 +7,17 @@ const list = {
   },
   template: `
   <section>
-    <div ng-show="$ctrl.contactList[0]" ng-repeat="post in $ctrl.postList">
-    <h3>{{ post.head }}</h3>
-    <p>{{ post.text }}</p>
+    <div ng-show="$ctrl.postList[0]" ng-repeat="posts in $ctrl.postList">
+    <h3>{{ posts.head }}</h3>
+    <p>{{ posts.text }}</p>
     </div>
-    <p ng-hide="$ctrl.contactList[0]">{{ $ctrl.warning }}</p>
+    <p ng-hide="$ctrl.postList[0]">{{ $ctrl.warning }}</p>
   </section>
   `,
   controller: function () {
     const vm = this;
     vm.$onInit = () => {
-      if (!vm.contactList[0]) {
+      if (!vm.postList[0]) {
         vm.warning = "There are no Posts. Please add a post.";
       }
     };

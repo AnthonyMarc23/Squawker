@@ -2,7 +2,7 @@
 
 const userForm = {
   bindings: {
-    newPost: "&"
+    addPost: "&"
   },
 
   template: `
